@@ -29,7 +29,9 @@ A universal pattern for showing UI refinement, onboarding, or product value in o
 
 ## 4. Anti-Slop Quality Checklist
 Before shipping any UI, interaction, or animation:
-- [ ] **No generic AI gradients or crude wireframe SVGs**: Never use loud 2-stop neon/pink-purple gradient blobs as fake photos or avatars. Use real high-res photography (`object-fit: cover` + subtle bottom scrim) for media/travel/food/profile cards, and multi-layered vector art (shadows, glass, metallic accents) for product/EV/weather illustrations.
+- [ ] **No generic AI gradients or crude wireframe SVGs**: Never use loud 2-stop neon/pink-purple gradient blobs as fake photos or avatars. Use real high-res photography (`object-fit: cover` + subtle bottom scrim) for media/travel/food/profile cards, and multi-layered vector art (3D radial sphere shading, clipped continents, metallic gradients, tinted glass, multi-spoke wheels, `preserveAspectRatio="xMidYMid meet"`) for product/EV/globe/weather illustrations.
+- [ ] **Editorial Color Discipline (Avoid Single-Color Overload)**: Do not paint every button, pill, bar, and toggle the same bright accent color. Use **Ink (`#141416` in light / `#F4F4F5` in dark)** for primary neutral controls, and reserve purposeful per-domain accents (**Emerald** `#059669` for finance/crypto/EV, **Indigo** `#4F46E5` for AI/audio, **Teal** `#0D9488` for live telemetry, **Rose** `#E11D48` for health/BPM).
+- [ ] **Every Card Must Feel Alive**: Pair spring-gliding selection pills (`calPill`), expanding radar pulse rings, Ken Burns photo pans, streaming AI text, area-filled sparklines with glowing tip dots, beating BPM icons, and floating product shadows so no widget looks static.
 - [ ] **No layout jitter**: All animating numbers use `tabular-nums` (`tnum`) and fixed-width containers or `roll()` odometers.
 - [ ] **No binary pops**: Icons, labels, and badges crossfade (`xswap`) or spring-scale rather than snapping at `p > 0.5`.
 - [ ] **No jank**: Animate only `transform` and `opacity` (plus `clip-path` / `stroke-dashoffset` where appropriate). Avoid animating `width`/`height` on heavy DOM trees when `transform` or spring-interpolated layout works.
